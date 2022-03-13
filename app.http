@@ -1,0 +1,66 @@
+POST http://localhost:3000/register/
+Content-Type:application/json
+
+{
+    "username":"Sunil1050",
+    "name":"Sunil Chitikina",
+    "password":"Sunil@1050",
+    "gender":"Male",
+    "location":"Hydreabad"
+}
+
+###
+POST http://localhost:3000/login/
+Content-Type:application/json
+
+{
+    "username":"Sunil1050",
+    "password":"Sunil@1050"
+}
+
+###
+GET http://localhost:3000/states/
+Authorization:Bearer kjbhbkijb
+###
+GET http://localhost:3000/states/15/
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlN1bmlsMTA1MCIsImlhdCI6MTY0NTYzMTA1Nn0.oKTBIlJf15hsCVg9_h-2t6yeclCU_ikQfUbyebcqmFs
+
+###
+GET http://localhost:3000/districts/400/
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlN1bmlsMTA1MCIsImlhdCI6MTY0NTYzMTA1Nn0.oKTBIlJf15hsCVg9_h-2t6yeclCU_ikQfUbyebcqmFs
+
+###
+POST http://localhost:3000/districts/
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlN1bmlsMTA1MCIsImlhdCI6MTY0NTYzMTA1Nn0.oKTBIlJf15hsCVg9_h-2t6yeclCU_ikQfUbyebcqmFs
+Content-Type: application/json
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+###
+DELETE http://localhost:3000/districts/200/
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlN1bmlsMTA1MCIsImlhdCI6MTY0NTYzMTA1Nn0.oKTBIlJf15hsCVg9_h-2t6yeclCU_ikQfUbyebcqmFs
+
+###
+PUT http://localhost:3000/districts/400/
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlN1bmlsMTA1MCIsImlhdCI6MTY0NTYzMTA1Nn0.oKTBIlJf15hsCVg9_h-2t6yeclCU_ikQfUbyebcqmFs
+Content-Type:application/json
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+###
+GET http://localhost:3000/states/1/stats/
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlN1bmlsMTA1MCIsImlhdCI6MTY0NTYzMTA1Nn0.oKTBIlJf15hsCVg9_h-2t6yeclCU_ikQfUbyebcqmFs
